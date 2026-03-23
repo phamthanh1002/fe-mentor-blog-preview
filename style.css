@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Figtree";
+    src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --small-sm: 0.25rem;
+    --medium-md: 0.5rem;
+    --large-lg: 0.75rem;
+    --extra-large-exlg: 1.5rem;
+    /* 4, 8, 12, 24px */
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(47, 88%, 63%);
+    font-family: "Figtree", sans-serif;
+    color: hsl(0, 0%, 7%);
+}
+
+.card {
+    width: 100%;
+    max-width: 23.875rem;
+    height: 100%;
+    max-height: 32.5rem;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.4rem;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 0%, 7%);
+    text-align: left;
+    box-shadow: 10px 10px hsl(0, 0%, 7%);
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+}
+
+.card__status {
+    display: inline-block;
+    background-color: hsl(47, 88%, 63%);
+    padding: var(--small-sm) var(--large-lg) var(--small-sm) var(--large-lg);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+}
+
+.card__date {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+}
+
+.card__title {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.card__content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: hsl(0, 0%, 42%);
+    margin-bottom: 1.5rem;
+}
+
+.card__author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.card__author-avatar {
+    width: 32px;
+    margin-right: 0.8rem;
+}
+
+.card__author-name {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@media (min-width: 320px) {
+    .card {
+        width: 90vw;
+    }
+}
