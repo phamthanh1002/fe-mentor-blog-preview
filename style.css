@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root {
@@ -40,8 +41,7 @@ body {
 .card {
     width: 100%;
     max-width: 23.875rem;
-    height: 100%;
-    max-height: 32.5rem;
+    min-height: 32.5rem;
     background-color: hsl(0, 0%, 100%);
     padding: 1.4rem;
     border-radius: 20px;
@@ -51,9 +51,12 @@ body {
 }
 
 .card__image {
+    display: block;
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.4rem;
 }
 
 .card__status {
@@ -78,7 +81,16 @@ body {
     font-size: 24px;
     line-height: 1.5;
     margin-bottom: 0.8rem;
-    cursor: pointer;
+}
+
+.card__title a {
+    color: hsl(0, 0%, 7%);
+}
+
+.card__title a:active,
+.card__title a:hover,
+.card__title a:focus-visible {
+    color: hsl(47, 88%, 63%);
 }
 
 .card__content {
@@ -106,7 +118,7 @@ body {
     font-style: normal;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 20em) {
     .card {
         width: 90vw;
     }
